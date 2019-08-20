@@ -5,11 +5,17 @@ class StripoWrapper {
   constructor() {
     this.Stripo = null;
   }
+  async load() {
+    const results = await fromCdn([stripoCdn]);
+    this.Stripo = results[0];
+    return this;
+  }
+
   async init(stripoSettings) {
-    const Stripo = await fromCdn(stripoCdn);
-    this.Stripo = Stripo;
+    if (!this.Stripo) {
+      await this.load();
+    }
     this.Stripo.init(stripoSettings);
-    return this.Stripo;
   }
 
   isLoaded() {
