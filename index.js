@@ -7,7 +7,7 @@ class StripoWrapper {
   }
   async load() {
     const results = await fromCdn([stripoCdn]);
-    this.Stripo = results[0];
+    this.Stripo = (window.Stripo) ? window.Stripo : results[0];
     return this;
   }
 
