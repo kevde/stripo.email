@@ -18,13 +18,15 @@ class StripoWrapper {
     secretKey,
     ...stripoSettings
   }) {
-    const pluginId = st
     if (!this.Stripo) {
       await this.load();
     }
     this.Stripo.init({
       ...stripoSettings,
-      getAuthToken: this.getAuthTokenFunc(pluginId, secretKey),
+      getAuthToken: async (callback) => {
+        const token = await this.getAuthToken(pluginId, secretKey);
+        callback(token)
+      },
     });
   }
 
@@ -33,7 +35,7 @@ class StripoWrapper {
       pluginId,
       secretKey
     });
-    return (callback) => calback(response.token);
+    return response.data.token;
   }
 
   isLoaded() {
