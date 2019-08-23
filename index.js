@@ -13,6 +13,18 @@ class StripoWrapper {
     return this;
   }
 
+  get StripoApi() {
+    return window.StripoApi;
+  }
+
+  get StripoPerfTraceEnabled() {
+    return window.StripoPerfTraceEnabled;
+  }
+
+  get StripoPerfTrace() {
+    return window.StripoPerfTrace;
+  }
+
   async init({
     pluginId,
     secretKey,
