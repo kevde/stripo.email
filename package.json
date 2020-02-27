@@ -9,11 +9,11 @@
   },
   "babel": {
     "plugins": [
-      "babel-plugin-transform-object-rest-spread"
+      "@babel/plugin-proposal-object-rest-spread"
     ],
     "presets": [
-      "latest",
-      "react"
+      "@babel/preset-env",
+      "@babel/preset-react"
     ]
   },
   "author": "Kevin de Guzman",
@@ -26,10 +26,10 @@
     "webpack": "^4.39.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-latest": "^6.24.1",
-    "babel-preset-react": "^6.24.1"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-react": "^7.8.3"
   }
 }
