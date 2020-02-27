@@ -2,9 +2,19 @@
   "name": "stripo.email",
   "version": "0.0.9",
   "description": "Stripo Email Wrapper",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run start src/index.js",
+    "prepublish": "babel src --out-dir lib"
+  },
+  "babel": {
+    "plugins": [
+      "babel-plugin-transform-object-rest-spread"
+    ],
+    "presets": [
+      "latest",
+      "react"
+    ]
   },
   "author": "Kevin de Guzman",
   "license": "ISC",
@@ -13,5 +23,12 @@
     "from-cdn": "^1.0.1",
     "react": "^16.9.0",
     "webpack": "^4.39.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
   }
 }

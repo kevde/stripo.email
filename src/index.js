@@ -1,9 +1,9 @@
-const fromCdn = require('from-cdn');
-const axios = require('axios');
+import fromCdn from 'from-cdn';
+import axios from 'axios';
 const CDN_PATH = 'https://plugins.stripo.email/static/latest/stripo.js';
 const AUTH_PATH = 'https://plugins.stripo.email/api/v1/auth';
 
-class StripoWrapper {
+class StripoWrapperClass {
   constructor() {
     this.Stripo = null;
   }
@@ -25,11 +25,12 @@ class StripoWrapper {
     return window.StripoPerfTrace;
   }
 
-  async init({
-    pluginId,
-    secretKey,
-    ...stripoSettings
-  }) {
+  async init(initValues) {
+    const {
+      pluginId,
+      secretKey,
+      ...stripoSettings
+    } = initValues;
     if (!this.Stripo) {
       await this.load();
     }
@@ -55,4 +56,4 @@ class StripoWrapper {
   }
 }
 
-module.exports = new StripoWrapper();
+export default StripoWrapper = new StripoWrapperClass();

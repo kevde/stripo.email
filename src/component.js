@@ -1,5 +1,5 @@
-const React = require('react');
-const StripoWrapper = require('./index');
+import React from 'react';
+import StripoWrapper from './index';
 
 class StripoWrapperComponent extends React.Component {
 
@@ -18,4 +18,4 @@ class StripoWrapperComponent extends React.Component {
   }
 }
 
-module.exports = StripoWrapperComponent;
+export default StripoWrapperComponent;
