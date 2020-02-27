@@ -1,6 +1,6 @@
 {
   "name": "stripo.email",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Stripo Email Wrapper",
   "main": "lib/index.js",
   "scripts": {
