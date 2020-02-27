@@ -56,4 +56,6 @@ class StripoWrapperClass {
   }
 }
 
-export default StripoWrapper = new StripoWrapperClass();
+const StripoWrapper = new StripoWrapperClass();
+
+export default StripoWrapper;
