@@ -13,18 +13,6 @@ class StripoWrapperClass {
     return this;
   }
 
-  get StripoApi() {
-    return window.StripoApi;
-  }
-
-  get StripoPerfTraceEnabled() {
-    return window.StripoPerfTraceEnabled;
-  }
-
-  get StripoPerfTrace() {
-    return window.StripoPerfTrace;
-  }
-
   async init(initValues) {
     const {
       pluginId,
@@ -57,5 +45,11 @@ class StripoWrapperClass {
 }
 
 const StripoWrapper = new StripoWrapperClass();
+
+export const StripoApi = window.StripoApi;
+
+export const StripoPerfTraceEnabled = window.StripoPerfTraceEnabled;
+
+export const StripoPerfTrace = window.StripoPerfTrace;
 
 export default StripoWrapper;

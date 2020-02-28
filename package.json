@@ -19,7 +19,7 @@
   "author": "Kevin de Guzman",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.19.2",
     "from-cdn": "^1.0.1",
     "react": "^16.9.0",
     "stripo.email": "^0.0.11",
