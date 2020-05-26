@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "npm run start src/index.js",
-    "prepublish": "babel src --out-dir lib"
+    "prepare": "babel src --out-dir lib"
   },
   "babel": {
     "plugins": [
