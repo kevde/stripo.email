@@ -42,6 +42,18 @@ class StripoWrapperClass {
   isLoaded() {
     return this.Stripo !== null;
   }
+
+  get StripoApi() {
+    return window.StripoApi;
+  }
+
+  get StripoPerfTraceEnabled() {
+    return window.StripoPerfTraceEnabled;
+  }
+
+  get StripoPerfTrace() {
+    return window.StripoPerfTrace;
+  }
 }
 
 const StripoWrapper = new StripoWrapperClass();
